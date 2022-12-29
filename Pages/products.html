@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Styles/SCSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <script src="/Scripts/product.js" defer></script>
+    <script src="/Scripts/script.js" defer></script>
+    <script src="/Scripts/basket.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Notification Start-->
+    <div class="notifications">
+      <div class="notification-container">
+        <div class="notification-success">
+          <i class="fa fa-check-circle " aria-hidden="true"></i>
+          <a>Successfully Added</a>
+        </div>
+
+        <div class="notification-login-success">
+          <i class="fa fa-check-circle fa-shake" aria-hidden="true"></i>
+          <a>Logged Successfully</a>
+        </div>
+
+        <div class="notification-error">
+          <i class="fa fa-bomb fa-shake" aria-hidden="true"></i>
+          <a>Something went Wrong!!</a>
+        </div>
+
+        <div class="notification-remove">
+          <i class="fa fa-trash fa-shake" aria-hidden="true"></i>
+          <a>Removed Successfully</a>
+        </div>
+      </div>
+    </div>
+    <!-- Notification End-->
+
+    <!-- Navigation Start-->
+    <div id="header">
+      <a href="/Pages/index.html"> <img src="/assets/shoplogo.png" alt="" /></a>
+      <div class="search">
+        <input type="search" />
+        <i class="fa fa-search search-icon" aria-hidden="true"></i>
+      </div>
+      <div class="nav-head">
+        <a href="/Pages/signin-up.html"
+          ><i class="fa fa-user icon" aria-hidden="true"></i>Login</a
+        >
+        <a id="favourites-btn" href="/Pages/favourites.html"
+          ><i class="fa-regular fa-heart icon"></i>Favourites</a
+        >
+        <a id="basket"
+          ><i class="fa fa-shopping-cart icon" aria-hidden="true"></i>Basket
+        </a>
+        <div id="basket-count"><span>99</span></div>
+      </div>
+    </div>
+    <nav class="navbars" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a href="/Pages/index.html"
+          ><img class="navbar-brand-logo" src="/assets/shoplogo.png" alt=""
+        /></a>
+
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div
+        id="navbarBasicExample"
+        style="width: 100% !important"
+        class="navbar-menu"
+      >
+        <div class="navbar-end">
+          <a href="/Pages/index.html" target="_blank" class="navbar-item">
+            HOME
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="#" target="_blank" class="navbar-link"> CLOTHES </a>
+            <div class="navbar-dropdown">
+              <a
+                href="/Pages/products.html"
+                target="_blank"
+                class="navbar-item"
+              >
+                MEN
+              </a>
+              <a href="#" target="_blank" class="navbar-item"> WOMEN </a>
+              <a href="#" target="_blank" class="navbar-item"> CHILD </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="#" target="_blank" class="navbar-link"> COSMETICS </a>
+            <div class="navbar-dropdown">
+              <a href="#" target="_blank" class="navbar-item"> LATEST NEWS </a>
+              <a href="#" target="_blank" class="navbar-item">
+                BRAVE INSIGHTS
+              </a>
+              <a href="#" target="_blank" class="navbar-item">
+                BRAVE RESEARCH
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="#" target="_blank" class="navbar-link">
+              HOME&FURNITURES
+            </a>
+            <div class="navbar-dropdown">
+              <a href="#" target="_blank" class="navbar-item"> LIGHTS </a>
+              <a href="#" target="_blank" class="navbar-item"> TABLES </a>
+            </div>
+          </div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="#" target="_blank" class="navbar-link">
+              WATCH&ACCESSORIES
+            </a>
+            <div class="navbar-dropdown">
+              <a href="#" target="_blank" class="navbar-item"> ABOUT </a>
+              <a href="#" target="_blank" class="navbar-item"> CAREERS </a>
+              <a href="#" target="_blank" class="navbar-item"> COMMUNITY </a>
+              <a href="#" target="_blank" class="navbar-item"> HELP CENTER </a>
+              <a href="#" target="_blank" class="navbar-item"> BRAND ASSETS </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="#" target="_blank" class="navbar-link"> ELECTRONICS </a>
+            <div class="navbar-dropdown">
+              <a href="#" target="_blank" class="navbar-item"> LATEST NEWS </a>
+              <a href="#" target="_blank" class="navbar-item">
+                BRAVE INSIGHTS
+              </a>
+              <a href="#" target="_blank" class="navbar-item">
+                BRAVE RESEARCH
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="#" target="_blank" class="navbar-link"> SPOR&OUTDOOR </a>
+            <div class="navbar-dropdown">
+              <a href="#" target="_blank" class="navbar-item"> LATEST NEWS </a>
+              <a href="#" target="_blank" class="navbar-item">
+                BRAVE INSIGHTS
+              </a>
+              <a href="#" target="_blank" class="navbar-item">
+                BRAVE RESEARCH
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation Start-->
+
+    <div class="product-container">
+      <div class="product-inner">
+        <aside class="categories">
+          <div class="category-item">
+            <div class="category-title" data-id="1">
+              <span>Gender</span>
+              <div><i id="1" class="fas fa-chevron-down arrow"></i></div>
+            </div>
+            <div class="sub-categories" id="1">
+              <div class="inner-category">
+                <div>
+                  <input id="Male" type="checkbox" />
+                  <label for="Male">Male </label>
+                </div>
+                <div>
+                  <input id="Female" type="checkbox" />
+                  <label for="Female">Female</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-item">
+            <div class="category-title" data-id="2">
+              <span>Brand</span>
+              <div><i id="2" class="fas fa-chevron-down arrow"></i></div>
+            </div>
+            <div class="sub-categories scroll" id="2">
+              <div class="inner-category">
+                <div>
+                  <input id="zara" type="checkbox" />
+                  <label for="zara">Zara</label>
+                </div>
+                <div>
+                  <input id="dilvin" type="checkbox" />
+                  <label for="dilvin">Dilvin</label>
+                </div>
+                <div>
+                  <input id="apple" type="checkbox" />
+                  <label for="apple">Apple</label>
+                </div>
+                <div>
+                  <input id="trend" type="checkbox" />
+                  <label for="trend">Trend</label>
+                </div>
+                <div>
+                  <input id="evony" type="checkbox" />
+                  <label for="evony">Evony</label>
+                </div>
+
+                <div>
+                  <input id="taksun" type="checkbox" />
+                  <label for="taksun">Taksun</label>
+                </div>
+                <div>
+                  <input id="yudum" type="checkbox" />
+                  <label for="yudum">Yudum</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-item">
+            <div class="category-title" data-id="3">
+              <span>Color</span>
+              <div><i id="3" class="fas fa-chevron-down arrow"></i></div>
+            </div>
+            <div class="sub-categories scroll" id="3">
+              <div class="inner-category colors">
+                <div>
+                  <input
+                    type="checkbox"
+                    class="btn-check color"
+                    data-value="black"
+                    id="black"
+                    autocomplete="off"
+                  />
+                  <label class="btn bg-black product-color" for="black"></label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    class="btn-check color"
+                    data-value="red"
+                    id="red"
+                    autocomplete="off"
+                  />
+                  <label class="btn bg-red product-color" for="red"></label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    class="btn-check color"
+                    data-value="yellow"
+                    id="yellow"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn bg-yellow product-color"
+                    for="yellow"
+                  ></label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    class="btn-check color"
+                    data-value="green"
+                    id="green"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn bg-green product-color"
+                    for="green"
+                  ></label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    class="btn-check color"
+                    data-value="gray"
+                    id="gray"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn bg-gray product-color"
+                    for="gray"
+                  ></label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    class="btn-check color"
+                    data-value="blue"
+                    id="blue"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn bg-blue product-color"
+                    for="blue"
+                  ></label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    class="btn-check color"
+                    data-value="purple"
+                    id="purple"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn bg-purple product-color"
+                    for="purple"
+                  ></label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    class="btn-check color"
+                    data-value="white"
+                    id="white"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn bg-whitet product-color"
+                    for="white"
+                  ></label>
+                </div>
+
+                <div>
+                  <input
+                    type="checkbox"
+                    class="btn-check color"
+                    data-value="wheat"
+                    id="wheat"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn bg-wheat product-color"
+                    for="wheat"
+                  ></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-item">
+            <div class="category-title" data-id="4">
+              <span>Model</span>
+              <div><i id="4" class="fas fa-chevron-down arrow"></i></div>
+            </div>
+            <div class="sub-categories" id="4">
+              <div class="inner-category">
+                <div>
+                  <input id="hooded" type="checkbox" />
+                  <label for="hooded">Hooded</label>
+                </div>
+                <div>
+                  <input id="straight" type="checkbox" />
+                  <label for="straight">Straight</label>
+                </div>
+                <div>
+                  <input id="oversize" type="checkbox" />
+                  <label for="oversize">Oversize</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-item">
+            <div class="category-title" data-id="6">
+              <span>Material</span>
+              <div><i id="6" class="fas fa-chevron-down arrow"></i></div>
+            </div>
+            <div class="sub-categories" id="6">
+              <div class="inner-category">
+                <div>
+                  <input id="hooded" type="checkbox" />
+                  <label for="hooded">Cotton</label>
+                </div>
+                <div>
+                  <input id="synthetic" type="checkbox" />
+                  <label for="synthetic">Synthetic</label>
+                </div>
+                <div>
+                  <input id="wool" type="checkbox" />
+                  <label for="wool">Wool</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-item">
+            <div class="category-title" data-id="5">
+              <span>Price</span>
+              <div><i id="5" class="fas fa-chevron-down arrow"></i></div>
+            </div>
+            <div class="sub-categories" id="5">
+              <div class="inner-category">
+                <div class="price-filter">
+                  <input id="min" type="number" placeholder="min" />
+                  <label for="min">-</label>
+                  <input id="max" type="number" placeholder="max" />
+                  <div class="search-filter">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="product-center">
+          <div class="products">
+            <div class="product-item" data-id="1">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product1.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="1">
+                <div class="product-heart" data-id="1">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="2">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product5.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="2">
+                <div class="product-heart" data-id="2">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="3">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product1.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="3">
+                <div class="product-heart" data-id="3">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="4">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product5.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="4">
+                <div class="product-heart" data-id="4">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="5">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product5.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="5">
+                <div class="product-heart" data-id="5">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="6">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product5.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="6">
+                <div class="product-heart" data-id="6">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="7">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product5.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="7">
+                <div class="product-heart" data-id="7">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="8">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product5.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="8">
+                <div class="product-heart">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="9">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product5.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="9">
+                <div class="product-heart">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="10">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product5.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+              </div>
+              <div class="head-right" id="10">
+                <div class="product-heart">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="11">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product4.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+              <div class="head-left">
+                <span class="fast-shipping">FAST SHIPPING</span>
+              </div>
+              <div class="head-right" id="11">
+                <div class="product-heart">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item" data-id="12">
+              <a href="/Pages/product-details.html">
+                <div class="product-img">
+                  <img src="/assets/product5.webp" alt="" />
+                </div>
+              </a>
+              <div class="product-info">
+                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
+                <span class="product-price">12$</span>
+              </div>
+
+              <div class="head-left">
+                <span class="free-shipping">FREE SHIPPING</span>
+              </div>
+              <div class="head-right" id="12">
+                <div class="product-heart">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div class="add-basket-btn">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="paginate">
+            <div class="pages">
+              <span class="page"
+                ><i class="fa fa-chevron-circle-left" aria-hidden="true"></i
+              ></span>
+              <span class="page-num disabled">1</span>
+              <span class="page-num">2</span>
+              <span class="page-num">3</span>
+              <span class="page"
+                ><i class="fa fa-chevron-circle-right" aria-hidden="true"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-items">
+          <div class="footer-item">
+            <h4>Social Accounts</h4>
+            <p><a href="">Instagram</a></p>
+            <p><a href="">Facebook</a></p>
+            <p><a href="">Instagram</a></p>
+            <p><a href="">LinkedIn</a></p>
+          </div>
+
+          <div class="footer-item">
+            <h4>About Us</h4>
+            <p><a href="">Who we are</a></p>
+            <p><a href="">Careers</a></p>
+            <p><a href="">Instagram</a></p>
+            <p><a href="">LinkedIn</a></p>
+          </div>
+
+          <div class="footer-item">
+            <h4>Social Accounts</h4>
+            <p>
+              <a href=""
+                >Facebook <i class="fa-brands fa-square-facebook"></i
+              ></a>
+            </p>
+            <p>
+              <a href="">Instagram <i class="fa-brands fa-instagram"></i></a>
+            </p>
+            <p>
+              <a href="">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+            </p>
+          </div>
+
+          <div class="footer-item">
+            <h4>Contact Info</h4>
+            <p>
+              <a href="">+994(55)222-21-11<i class="fa-solid fa-mobile"></i></a>
+            </p>
+            <p>
+              <a href="">+994(12)122-21-11 <i class="fa-solid fa-phone"></i></a>
+            </p>
+            <p>
+              <a href=""
+                >example@gmail.com <i class="fa-solid fa-envelope"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="mini-cart menu-open align-items-stretch align-content-stretch"
+      id="CartDrawer"
+    >
+      <div id="close-basket-btn">
+        <i class="fa fa-close" aria-hidden="true"></i>
+      </div>
+      <div class="cart-item-list" id="cartItemList">
+        <div class="cart-item border-bottom py-2">
+          <a
+            href="/products/vegan-leather-jacket-black?variant=31051674845249"
+            class="row"
+          >
+            <div class="cart-item--image col-3">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0029/4466/3598/products/H20OU0010018999B-01_Moon.jpg?v=1573576938"
+                alt="Embroidered logo faux leather jacket - H20OU0010018999B / Black / 40"
+              />
+            </div>
+            <div
+              class="cart-item--description d-flex flex-column justify-content-start col-6"
+            >
+              <h5 class="item-description--title fs-16 serif translatable">
+                <span class="visually-hidden">product title</span> Embroidered
+                logo faux leather jacket
+              </h5>
+              <p class="mb-0 text-secondary sans fs-14 translatable">
+                <span class="translatable">Black</span> /
+                <span class="translatable">40</span>
+              </p>
+              <p class="mb-0 text-secondary sans fs-14">x1</p>
+            </div>
+            <div class="cart-item--price col-3 text-right serif mono">
+              <span class="price">675,00€</span>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+        <div class="cart-item border-bottom py-2">
+          <a class="row">
+            <div class="cart-item--image col-3">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0029/4466/3598/products/H20JW0111000299G-01_Lea.jpg?v=1573576937"
+                alt="Circular Dress - Sienna Riddle Print - H20DR00100065012 / Sienna Riddle Print / 38"
+              />
+            </div>
+            <div
+              class="cart-item--description d-flex flex-column justify-content-start col-6"
+            >
+              <h5 class="item-description--title fs-16 serif translatable">
+                <span class="visually-hidden">product title</span> Circular
+                Dress - Sienna Riddle Print
+              </h5>
+              <p class="mb-0 text-secondary sans fs-14 translatable">
+                <span class="translatable">Sienna Riddle Print</span> /
+                <span class="translatable">38</span>
+              </p>
+              <p class="mb-0 text-secondary sans fs-14">x1</p>
+            </div>
+            <div class="cart-item--price col-3 text-right serif mono">
+              <span class="price">750,00€</span>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+        <div class="cart-item border-bottom py-2">
+          <a class="row">
+            <div class="cart-item--image col-3">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0029/4466/3598/products/H20JW0111000299G-01_Lea.jpg?v=1573576937"
+                alt="Circular brass and pearl earrings - H20JW0111000299G / Gold / TU"
+              />
+            </div>
+            <div
+              class="cart-item--description d-flex flex-column justify-content-start col-6"
+            >
+              <h5 class="item-description--title fs-16 serif translatable">
+                <span class="visually-hidden">product title</span> Circular
+                brass and pearl earrings
+              </h5>
+              <p class="mb-0 text-secondary sans fs-14 translatable">
+                <span class="translatable">Gold</span> /
+                <span class="translatable">TU</span>
+              </p>
+              <p class="mb-0 text-secondary sans fs-14">x1</p>
+            </div>
+            <div class="cart-item--price col-3 text-right serif mono">
+              <span class="price">350,00€</span>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+        <div class="cart-item border-bottom py-2">
+          <a class="row">
+            <div class="cart-item--image col-3">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0029/4466/3598/products/H20JW0111000299G-01_Lea.jpg?v=1573576937"
+                alt="Circular Dress - Sienna Riddle Print - H20DR00100065012 / Sienna Riddle Print / 38"
+              />
+            </div>
+            <div
+              class="cart-item--description d-flex flex-column justify-content-start col-6"
+            >
+              <h5 class="item-description--title fs-16 serif translatable">
+                <span class="visually-hidden">product title</span> Circular
+                Dress - Sienna Riddle Print
+              </h5>
+              <p class="mb-0 text-secondary sans fs-14 translatable">
+                <span class="translatable">Sienna Riddle Print</span> /
+                <span class="translatable">38</span>
+              </p>
+              <p class="mb-0 text-secondary sans fs-14">x1</p>
+            </div>
+            <div class="cart-item--price col-3 text-right serif mono">
+              <span class="price">750,00€</span>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+        <div class="cart-item border-bottom py-2">
+          <a class="row">
+            <div class="cart-item--image col-3">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0029/4466/3598/products/H20JW0111000299G-01_Lea.jpg?v=1573576937"
+                alt="Circular brass and pearl earrings - H20JW0111000299G / Gold / TU"
+              />
+            </div>
+            <div
+              class="cart-item--description d-flex flex-column justify-content-start col-6"
+            >
+              <h5 class="item-description--title fs-16 serif translatable">
+                <span class="visually-hidden">product title</span> Circular
+                brass and pearl earrings
+              </h5>
+              <p class="mb-0 text-secondary sans fs-14 translatable">
+                <span class="translatable">Gold</span> /
+                <span class="translatable">TU</span>
+              </p>
+              <p class="mb-0 text-secondary sans fs-14">x1</p>
+            </div>
+            <div class="cart-item--price col-3 text-right serif mono">
+              <span class="price">350,00€</span>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="cart-info">
+        <div class="cart-subtotals border-top border-bottom pt-2 pb-1">
+          <div class="cart-subtotals--row d-flex justify-content-between w-100">
+            <p class="sans fs-14">Subtotal</p>
+            <span class="price serif mono" data-drawer-subtotal=""
+              >1.775,00€</span
+            >
+          </div>
+          <div class="cart-subtotals--row d-flex justify-content-between w-100">
+            <p class="sans fs-14">Shipping</p>
+            <span class="text-secondary sans fs-14"
+              >Calculated at the next step</span
+            >
+          </div>
+        </div>
+        <div class="cart-totals pt-2">
+          <div class="cart-totals--row d-flex justify-content-between w-100">
+            <p class="serif">Total</p>
+            <span class="price serif mono" data-drawer-total="">1.775,00€</span>
+          </div>
+          <div class="cart-totals--row">
+            <p class="mb-0 text-secondary sans fs-14">
+              <span class="fs-14 tk-brandon-grotesque text-secondary"
+                >Taxes 183,33€ included</span
+              >
+            </p>
+          </div>
+        </div>
+        <div
+          class="cart-buttons d-flex justify-content-between align-items-center pt-1"
+        >
+          <a href="/cart" class="btn btn-underline-primary sans fs-14"
+            >View bag</a
+          >
+          <a
+            href="/checkout"
+            class="text-uppercase fs-12 tk-brandon-grotesque btn btn-primary btn-xs-block"
+            id="drawerCheckoutButton"
+            >Checkout</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

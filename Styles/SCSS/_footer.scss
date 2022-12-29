@@ -1,0 +1,22 @@
+.footer {
+  margin-top: 100px;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+
+  h4 {
+    border-bottom: 1px dashed black;
+  }
+
+  a {
+    color: gray;
+    font-size: 14px;
+  }
+}
+
+p{
+  margin: 0 !important;
+}

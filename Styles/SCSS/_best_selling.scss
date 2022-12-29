@@ -1,0 +1,128 @@
+.best-selling {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+
+  h3 {
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 20px;
+
+    color: black;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 80px;
+      border-radius: 5px;
+      border-bottom: 5px solid red;
+    }
+  }
+}
+
+#main-container {
+  border-radius: 5px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .best-selling-items {
+    padding-bottom: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    .best-selling-item {
+      background: white;
+      width: 230px;
+      height: 350px;
+      position: relative;
+      text-align: center;
+      transition: border-color 0.3s;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0px 1px 12px 7px rgb(0 0 0 / 5%);
+      // border: solid 1px #e6e6e6;
+      background-color: #fff;
+
+      .price {
+        position: absolute;
+        bottom: 65px;
+        right: 15px;
+        width: 60px;
+        height: 25px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        background: orangered;
+        color: white;
+        font-size: 17px;
+        border-radius: 5px;
+        transition: background .3s ease-in;
+
+        &:hover{
+          background: rgb(175, 51, 6);
+        }
+      }
+
+      .best-sell-img {
+        overflow: hidden;
+        width: 210px;
+        height: 300px;
+        object-fit: fill;
+        border-radius: 3px;
+
+        &:hover img {
+          animation: crescendo 1.5s linear;
+        }
+      }
+      &:hover {
+        box-shadow: inset 0px 1px 20px 0px rgb(0 0 0 / 5%);
+        cursor: pointer;
+      }
+
+      p {
+        color: gray;
+        font-size: 15px;
+      }
+
+      .wish-list {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 2;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background: orangered;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+@keyframes crescendo {
+  100% {
+    transform: scale(1.033);
+  }
+}
