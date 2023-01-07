@@ -10,18 +10,7 @@ $(document).ready(function () {
   });
 });
 
-//   var favourite=[];
-//   $(document).ready(function(){
-//     $(".add-basket-btn").click(function(){
-//         var id=$(this).data("id")
-//         var item=$(`.wish-item[id=${id}]`).html();
-//         if(!favourite.includes(item)&&item!=null){
-//             favourite.push(item);
-//             localStorage.setItem("favourites", JSON.stringify(favourite));
-//         }
-//     })
-//   })
-
+ 
 var favourite = [];
 
 $(document).ready(function () {
@@ -38,28 +27,20 @@ $(document).ready(function () {
       return;
     } else {
       favourite.push(id);
+      $(this).css("color","red")
+      $(this).css("background","white")
       localStorage.setItem("favouritesId", JSON.stringify(favourite));     
       $(".notification-success").fadeIn(1000);
       setTimeout(() => {
         $(".notification-success").fadeOut(3000);
       }, 2000);
     }
-
-    // var item =document.querySelector(`.product-item[data-id="${id}"]`).outerHTML;
-    // if (!favourite.includes(item) && item != null) {
-    //   favourite.push(item);
-    //   localStorage.setItem("favourites", JSON.stringify(favourite));
-    // }
   });
 });
 
 var wishList = document.getElementById("wish-inner");
 var favouriteBtn = document.getElementById("favourites-btn");
 
-// var savedList = JSON.parse(localStorage.getItem("favourites"));
-// savedList.map((item) => {
-//   wishList.insertAdjacentHTML("afterbegin", item);
-// });
 
 $(document).ready(function () {
   $(".add-basket-btn").click(function () {
@@ -81,3 +62,5 @@ $(document).ready(function(){
   }, 2000);
   })
 })
+
+

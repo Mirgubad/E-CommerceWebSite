@@ -2,17 +2,16 @@
   flex-direction: column;
   justify-content: stretch;
   padding: 10px;
-  height: 30%;
-  width: 17%;
+  height: 5%;
+  width: 23%;
   position: absolute;
   top: 55px;
-  right: 155px;
+  right: 80px;
   z-index: 99;
   display: none;
   overflow-y: scroll;
   background: white;
   border: 1px solid #e6e6ee;
-  // box-shadow: 1px 1px 5px 2px burlywood;
   border-radius: 6px;
 
   .cart-item--image{

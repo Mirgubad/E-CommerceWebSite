@@ -1,7 +1,8 @@
 .in-sale {
-  padding-top: 50px;
+  padding: 100px 0 100px 0;
   width: 100%;
-  text-align: center;
+  text-align: center ;
+  position: inherit;
 
   h3 {
     font-size: 25px;
@@ -12,7 +13,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 35px;
+      top: 32px;
       left: 50%;
       width: 30px;
       transform: translate(-50%);
@@ -26,91 +27,91 @@
   display: flex;
   width: 100%;
   align-items: center;
+  height: fit-content;
 
-  #prevsale,
-  #nextsale {
-    font-size: 20px;
-    color: gray;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    // background: rgb(67, 67, 67);
-    // width: 40px;
-    // height: 40px;
-    border-radius: 50%;
-
-    &:hover {
-      color: rgb(1, 1, 1);
-    }
-  }
-
-  #prevsale,
-  #nextsale {
-    position: absolute;
-    z-index: 2;
-  }
-  #prevsale {
-    left: -30px;
-  }
-  #nextsale {
-    right: -30px;
-  }
 
   .in-sale-items {
     padding-bottom: 20px;
     margin: 0 auto;
-    overflow: hidden;
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
     .in-sale-item {
       background: white;
       width: 230px;
-      height: 350px;
+      height: 390px;
       position: relative;
       text-align: center;
       transition: border-color 0.3s;
       border-radius: 5px;
-      padding: 10px;
-      box-shadow: 0 1px 4px 0 rgb(0 0 0 / 5%);
-      border: solid 1px #e6e6e6;
+      padding: 5px;
+      transition: box-shadow 0.3s linear;
+      border: solid 1px #e6e6ee;
       background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+
+      .item-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 73px;
+      }
+
+    
       .in-sale-img {
         overflow: hidden;
-        width: 210px;
-        height: 250px;
+        width: 218px;
+        height: 300px;
+        object-fit: fill;
+        border-radius: 3px;
+        margin-bottom: 5px;
 
         &:hover img {
           animation: crescendo 1.5s linear;
         }
       }
       &:hover {
-        border-color: orange;
+        box-shadow: 0px 1px 20px 3px rgb(0 0 0 / 5%);
         cursor: pointer;
       }
 
-      p {
+      p{
         color: gray;
+        font-size: 15px;
+        overflow: hidden;
+        text-align: left;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
       }
 
       span {
-        font-size: 16px;
         color: orangered;
-        font-weight: bold;
+        font-weight: 500;
+        font-size: 14px;
       }
 
       .wish-list {
-        position: absolute;
+         position: absolute;
         top: 15px;
-        right: 20px;
+        right: 15px;
         z-index: 2;
         border-radius: 50%;
-        text-align: center;
-        font-size: 16px;
+        font-size: 18px;
         cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background: orangered;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 7px 7px rgb(0 0 0 / 5%);
 
-        &:hover {
-          color: red;
-        }
       }
     }
   }

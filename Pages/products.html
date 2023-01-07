@@ -27,9 +27,11 @@
     <script src="/Scripts/product.js" defer></script>
     <script src="/Scripts/script.js" defer></script>
     <script src="/Scripts/basket.js" defer></script>
+    <script src="/Scripts/navbar.js" defer></script>
   </head>
 
   <body>
+    <div id="top"></div>
     <!-- Notification Start-->
     <div class="notifications">
       <div class="notification-container">
@@ -58,7 +60,7 @@
 
     <!-- Navigation Start-->
     <div id="header">
-      <a href="/Pages/index.html"> <img src="/assets/shoplogo.png" alt="" /></a>
+      <a href="/Pages/index.html"> <img src="/assets/logo.png" alt="" /></a>
       <div class="search">
         <input type="search" />
         <i class="fa fa-search search-icon" aria-hidden="true"></i>
@@ -67,7 +69,7 @@
         <a href="/Pages/signin-up.html"
           ><i class="fa fa-user icon" aria-hidden="true"></i>Login</a
         >
-        <a id="favourites-btn" href="/Pages/favourites.html"
+        <a href="/Pages/favourites.html"
           ><i class="fa-regular fa-heart icon"></i>Favourites</a
         >
         <a id="basket"
@@ -79,7 +81,7 @@
     <nav class="navbars" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a href="/Pages/index.html"
-          ><img class="navbar-brand-logo" src="/assets/shoplogo.png" alt=""
+          ><img class="navbar-brand-logo" src="/assets/logo.png" alt=""
         /></a>
 
         <a
@@ -105,9 +107,9 @@
             HOME
           </a>
 
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a href="#" target="_blank" class="navbar-link"> CLOTHES </a>
-            <div class="navbar-dropdown">
+          <div class="navbar-item has-dropdown is-hoverable" data-id="product">
+            <a class="navbar-link">PRODUCTS </a>
+            <div class="navbar-dropdown" id="product">
               <a
                 href="/Pages/products.html"
                 target="_blank"
@@ -119,55 +121,19 @@
               <a href="#" target="_blank" class="navbar-item"> CHILD </a>
             </div>
           </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a href="#" target="_blank" class="navbar-link"> COSMETICS </a>
-            <div class="navbar-dropdown">
-              <a href="#" target="_blank" class="navbar-item"> LATEST NEWS </a>
-              <a href="#" target="_blank" class="navbar-item">
-                BRAVE INSIGHTS
-              </a>
-              <a href="#" target="_blank" class="navbar-item">
-                BRAVE RESEARCH
-              </a>
-            </div>
-          </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a href="#" target="_blank" class="navbar-link">
-              HOME&FURNITURES
-            </a>
-            <div class="navbar-dropdown">
-              <a href="#" target="_blank" class="navbar-item"> LIGHTS </a>
-              <a href="#" target="_blank" class="navbar-item"> TABLES </a>
-            </div>
-          </div>
 
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a href="#" target="_blank" class="navbar-link">
-              WATCH&ACCESSORIES
-            </a>
-            <div class="navbar-dropdown">
-              <a href="#" target="_blank" class="navbar-item"> ABOUT </a>
-              <a href="#" target="_blank" class="navbar-item"> CAREERS </a>
+          <div class="navbar-item has-dropdown is-hoverable" data-id="about">
+            <a class="navbar-link"> ABOUT US </a>
+            <div class="navbar-dropdown" id="about">
+              <a href="/Pages/about.html#business" target="_blank/#whatwedo" class="navbar-item"> Who We Are </a>
+              <a href="/Pages/about.html#whatwedo" target="_blank" class="navbar-item"> What We Do </a>
               <a href="#" target="_blank" class="navbar-item"> COMMUNITY </a>
               <a href="#" target="_blank" class="navbar-item"> HELP CENTER </a>
-              <a href="#" target="_blank" class="navbar-item"> BRAND ASSETS </a>
             </div>
           </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a href="#" target="_blank" class="navbar-link"> ELECTRONICS </a>
-            <div class="navbar-dropdown">
-              <a href="#" target="_blank" class="navbar-item"> LATEST NEWS </a>
-              <a href="#" target="_blank" class="navbar-item">
-                BRAVE INSIGHTS
-              </a>
-              <a href="#" target="_blank" class="navbar-item">
-                BRAVE RESEARCH
-              </a>
-            </div>
-          </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a href="#" target="_blank" class="navbar-link"> SPOR&OUTDOOR </a>
-            <div class="navbar-dropdown">
+          <div class="navbar-item has-dropdown is-hoverable" data-id="elec">
+            <a class="navbar-link"> ELECTRONICS </a>
+            <div class="navbar-dropdown" id="elec">
               <a href="#" target="_blank" class="navbar-item"> LATEST NEWS </a>
               <a href="#" target="_blank" class="navbar-item">
                 BRAVE INSIGHTS
@@ -442,8 +408,8 @@
                 </div>
               </a>
               <div class="product-info">
-                <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <p>Lorem, ipsum ritatis conse ctetur ritatis consec teturs asasa sasa.</p>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -468,7 +434,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -493,7 +459,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.55$</span>
               </div>
 
               <div class="head-left">
@@ -518,7 +484,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -543,7 +509,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -568,7 +534,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -593,7 +559,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -618,7 +584,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -643,7 +609,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -668,7 +634,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -692,7 +658,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
               <div class="head-left">
                 <span class="fast-shipping">FAST SHIPPING</span>
@@ -715,7 +681,7 @@
               </a>
               <div class="product-info">
                 <p>Lorem, ipsum ritatis consectetur ritatis consectetur.</p>
-                <span class="product-price">12$</span>
+                <span class="product-price">12.99$</span>
               </div>
 
               <div class="head-left">
@@ -748,57 +714,91 @@
       </div>
     </div>
 
-    <footer class="footer">
+    <!-- Footer Start-->
+    <footer id="footer">
       <div class="footer-container">
         <div class="footer-items">
           <div class="footer-item">
-            <h4>Social Accounts</h4>
-            <p><a href="">Instagram</a></p>
-            <p><a href="">Facebook</a></p>
-            <p><a href="">Instagram</a></p>
-            <p><a href="">LinkedIn</a></p>
+            <h4>Payment Methods</h4>
+            <div>
+              <a id="visa" href="/Pages/about.html"
+                ><img src="/assets/visa.svg" alt=""></a>
+              <a id="mastercard" href=""
+                ><img src="/assets/mastercard.svg" alt=""></a>
+            </div>
+            <div>
+              <a id="maximum-card" href=""><img src="/assets/maximum-new.svg" alt=""></a>
+              <a id="world-bank" href=""
+                ><img src="/assets/world-new.svg" alt=""></a>
+            </div>
+          </div>
+
+          <div class="footer-item">
+            <h4>Mobile Applications</h4>
+            <a href="/" tabindex="0"
+              ><img
+                class="bn46"
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="bn45"
+            /></a>
+            <a href="/" tabindex="0"
+              ><img
+                class="bn45"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                alt="bn45"
+            /></a>
           </div>
 
           <div class="footer-item">
             <h4>About Us</h4>
-            <p><a href="">Who we are</a></p>
-            <p><a href="">Careers</a></p>
-            <p><a href="">Instagram</a></p>
-            <p><a href="">LinkedIn</a></p>
+            <a href="/Pages/about.html#business">Who we are</a>
+            <a href="/Pages/about.html#whatwedo">What We Do</a>
+            <a href="">FAQ</a>
           </div>
 
           <div class="footer-item">
-            <h4>Social Accounts</h4>
-            <p>
-              <a href=""
-                >Facebook <i class="fa-brands fa-square-facebook"></i
-              ></a>
-            </p>
-            <p>
-              <a href="">Instagram <i class="fa-brands fa-instagram"></i></a>
-            </p>
-            <p>
-              <a href="">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
-            </p>
+            <h4>Social Media</h4>
+            <a href="" id="facebook">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="" id="instagram">
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="" id="linkedin"> <i class="fa-brands fa-linkedin"></i></a>
           </div>
 
           <div class="footer-item">
             <h4>Contact Info</h4>
-            <p>
-              <a href="">+994(55)222-21-11<i class="fa-solid fa-mobile"></i></a>
-            </p>
-            <p>
-              <a href="">+994(12)122-21-11 <i class="fa-solid fa-phone"></i></a>
-            </p>
-            <p>
-              <a href=""
-                >example@gmail.com <i class="fa-solid fa-envelope"></i>
-              </a>
-            </p>
+            <a href="">+994(55)222-21-11<i class="fa-solid fa-mobile"></i></a>
+            <a href="">+994(12)122-21-11 <i class="fa-solid fa-phone"></i></a>
+            <a href=""
+              >example@gmail.com <i class="fa-solid fa-envelope"></i>
+            </a>
           </div>
         </div>
       </div>
+      <p class="footer-rights">This site created By Mirgubad Akbarov</p>
     </footer>
+    <!--Footer End-->
+  <!-- Scroll To Top-->
+  <a href="#top" id="to-top-btn">
+    <svg
+      width="20px"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M14 5l7 7m0 0l-7 7m7-7H3"
+      ></path>
+    </svg>
+  </a>
+  <!-- Scroll To Top-->
 
     <div
       class="mini-cart menu-open align-items-stretch align-content-stretch"
